@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include <png.h>
 
-#define HEADER_BYTE_LENGTH 8
+# define HEADER_BYTE_LENGTH 8
 
 int main(int argc, char *argv[]) {
     puts("***** start *****\n");
