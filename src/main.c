@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
     int is_png = !png_sig_cmp(header, 0, HEADER_BYTE_LENGTH);
     // PNG画像と判断されなければ、プログラムを終了。
     if (!is_png) {
-        printf("%s is not png...", path);
+        printf("%s is not png...\n", path);
         return -1;
     }
 
