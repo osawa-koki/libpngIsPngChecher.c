@@ -51,3 +51,39 @@ rm -r -f libpng-1.6.38.tar.gz
 ```bash
 sudo apt install libpng-dev
 ```
+
+# 使い方
+
+
+srcディレクトリに移動して、makeコマンドでコンパイルをします。
+
+```bash
+cd src
+make
+```
+
+objディレクトリに実行可能プログラムが生成されるため、これを実行します。  
+引数にはチェックしたいファイルへのパスを指定します。  
+
+```bash
+obj/main z.txt
+# -> Not Found...
+
+obj/main a.txt
+# a.txt is not PNG...
+
+obj/main a.png
+# a.png is PNG!!!
+
+obj/main a.jpg
+# -> a.jpg is not png...
+```
+
+拡張子で判断しているわけではないため、拡張子を変更しても正常に動作します。  
+ライブラリの内部構造を見たことはありませんが、PNGのフォーマットでは先頭2から4バイトにPNGっていう文字が入っていることから判断していると思われます。  
+
+以下の画像はPNGファイルをバイナリエディタで表示したものです。  
+16進数ですので、正確にはヘックスエディタですが、、、  
+
+![PNGバイナリ](dev/img/pngHex.gif)
+
