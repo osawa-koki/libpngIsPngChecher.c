@@ -1,4 +1,4 @@
-# libpngライブラリテスター(for C)
+# libpng関数テスター | png_sig_cmp
 
 libpngライブラリの動作確認をするための簡単なモジュールです。  
 libpngライブラリに所属するpng_sig_cmp関数を使用して指定したファイルがPNGフォーマットかどうかを判定します。  
